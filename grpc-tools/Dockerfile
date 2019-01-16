@@ -6,18 +6,6 @@ RUN apt-get -y install libgflags-dev libgtest-dev
 
 RUN apt-get -y install clang libc++-dev
 
-ENV LD_LIBRARY_PATH=/usr/local/lib
-ENV PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
-ENV GST_PLUGIN_PATH=/usr/local/lib
-ENV PATH=$PATH:/usr/local/lib:/usr/local
-
-RUN cd cerbero; ./cerbero-uninstalled build \
-  json-glib libsoup libnice
-
-RUN cd cerbero; rm -rf build/sources
-
-RUN cd cerbero; ldconfig
-
 # Install GRPC
 
 RUN git clone -b $(curl -L https://grpc.io/release) https://github.com/grpc/grpc
