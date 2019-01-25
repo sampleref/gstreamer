@@ -4,7 +4,7 @@ RUN apt-get -y install build-essential autoconf libtool pkg-config
 
 RUN apt-get -y install libgflags-dev libgtest-dev
 
-RUN apt-get -y install clang libc++-dev
+RUN apt-get -y install clang libc++-dev libcurl4-openssl-dev
 
 # Install GRPC
 
