@@ -1,5 +1,7 @@
 FROM nas2docker/gstreamer_grpc:base
 
+RUN apt-get update
+
 RUN apt-get -y install build-essential autoconf libtool pkg-config
 
 RUN apt-get -y install libgflags-dev libgtest-dev
