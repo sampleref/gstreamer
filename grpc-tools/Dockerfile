@@ -6,7 +6,11 @@ RUN apt-get -y install build-essential autoconf libtool pkg-config
 
 RUN apt-get -y install libgflags-dev libgtest-dev
 
-RUN apt-get -y install clang libc++-dev libcurl4-openssl-dev
+RUN apt-get -y install clang libc++-dev libcurl4-openssl-dev gcovr lcov
+
+# Sample media for testing
+RUN mkdir -p /root/media
+ADD samsung_sound_1080p.mp4 /root/media/samsung_sound_1080p.mp4
 
 # Install GRPC
 RUN git clone -b $(curl -L https://grpc.io/release) https://github.com/grpc/grpc /var/local/git/grpc && \
