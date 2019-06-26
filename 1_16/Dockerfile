@@ -1,4 +1,4 @@
-FROM ubuntu:16.04 
+FROM ubuntu:xenial-20190515
 
 # install required packages
 RUN apt-get update
