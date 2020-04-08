@@ -10,4 +10,4 @@ https://gitlab.freedesktop.org/libnice/libnice/-/merge_requests/60
 
 libnice 0.1.16 has support for multiple(array of Strings) as ignore prefixs list
 
-But GStreamer 1.16 uses on 0.1.5 of libnice so far
+But GStreamer 1.16 uses on 0.1.15 of libnice so far
