@@ -7,7 +7,14 @@ RUN apt-get -y install python-software-properties apt-utils vim htop dpkg-dev \
 RUN apt-add-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) multiverse"
 RUN apt-get update
 
-RUN apt-get install -y faac yasm
+RUN apt-get install -y faac yasm cppcheck unzip
+
+RUN mkdir -p /tmp/sonar-scanner \
+    && cd /tmp/sonar-scanner \
+	&& wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873-linux.zip \
+	&& unzip sonar-scanner-cli-4.2.0.1873-linux.zip \
+	&& mv sonar-scanner-4.2.0.1873-linux /opt/sonar-scanner
+
 
 # Git config is needed so that cerbero can cleanly fetch some git repos
 RUN git config --global user.email "ndn.user@xyz.com" \
