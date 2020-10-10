@@ -1,8 +1,8 @@
-FROM ubuntu:xenial-20200807 AS gstreamer_1_18
+FROM ubuntu:bionic-20200903 AS gstreamer_1_18
 
 # install required packages`
 RUN apt-get update
-RUN apt-get -y install python-software-properties apt-utils vim htop dpkg-dev \
+RUN apt-get -y install apt-utils vim htop dpkg-dev \
     openssh-server git-core wget nginx software-properties-common python3-setuptools pkg-config gdb gdbserver
 RUN apt-add-repository -y "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) multiverse"
 RUN apt-get update

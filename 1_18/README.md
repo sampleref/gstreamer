@@ -1,3 +1,4 @@
+Build on ubuntu:bionic-20200903
 Docker Build For
 
 GStreamer- 1.18
